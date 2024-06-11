@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\public",
+    "\\src",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\App.css",
+  "SelectedNode": "\\public\\favicon.ico",
   "PreviewInSolutionExplorer": false
 }
