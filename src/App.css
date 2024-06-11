@@ -24,7 +24,6 @@
     padding-top: 4vh;
 }
 
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -73,18 +72,22 @@
 }
 
 .header-logo {
-    height: auto; /* Adjusts height automatically based on width */
-    width: 10vw; /* Adjust width to scale with the viewport, you can change this based on your design needs */
+    height: auto;
+    width: 10vw;
     min-width: 180px;
-    position: absolute; /* Position it absolutely within the header */
-    left: 1vw; /* 5vw from the left of the screen */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Shift up by half its own height to perfectly center it */
+    position: absolute;
+    left: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 :root {
-    --color-primary: #4CAF50;
-    --color-primary-light: #66BB6A;
+    --color-primary: #B5325B; /* Laika */
+    --color-primary-light: #CF5F7D; /* Lighter Laika */
+    --color-secondary: #469C9A; /* Darkened Astro */
+    --color-secondary-light: #54C8CB; /* Astro */
+    --color-tertiary: #66a82e; /* Cosmo */
+    --color-tertiary-light:#7fb84a; /* Lighter Cosmo */
     --color-text-light: snow;
 }
 
@@ -107,56 +110,53 @@
     min-width: 20px;
     max-width: 160px;
     min-height: 20px;
-    max-height: 20px; /* Increased to accommodate larger text */
-    height: auto; /* Height adjusts to content, removed fixed vh */
+    max-height: 20px;
+    height: auto;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap;
 }
 
+.App-link:hover {
+    animation: glow 1s ease-in-out infinite;
+}
 
-    .App-link:hover {
-        animation: glow 1s ease-in-out infinite;
-    }
+.App-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: var(--color-primary);
+    border-radius: 25px;
+    filter: blur(10px);
+    opacity: 0.75;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
 
-    .App-link::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: var(--color-primary);
-        border-radius: 25px;
-        filter: blur(10px);
-        opacity: 0.75;
-        z-index: -1;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .App-link:hover::before {
-        filter: blur(20px);
-        opacity: 1;
-    }
+.App-link:hover::before {
+    filter: blur(20px);
+    opacity: 1;
+}
 
 @keyframes glow {
     0%, 100% {
         background-color: var(--color-primary);
     }
-
     50% {
         background-color: var(--color-primary-light);
     }
 }
 
-
 .App-footer {
-    background-color: #222222; /* Modified background color */
-    color: #707070; /* Subtle grey color */
+    background-color: #222222;
+    color: #707070;
     text-align: center;
     padding: 1vh 0;
-    font-size: calc(8px + 1vmin); /* Slightly smaller font size */
+    font-size: calc(8px + 1vmin);
     width: 100%;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -166,8 +166,57 @@
 }
 
 .small-text {
-    font-size: calc(6px + 1vmin); /* Even smaller font size for detailed disclaimer */
+    font-size: calc(6px + 1vmin);
     margin-left: 2vmin;
     margin-right: 2vmin;
+}
 
+.secondary-link {
+    background: var(--color-secondary);
+}
+
+.secondary-link::before {
+    background: var(--color-secondary);
+}
+
+.secondary-link:hover::before {
+    background: var(--color-secondary);
+}
+
+.secondary-link:hover {
+    animation: secondary-glow 1s ease-in-out infinite;
+}
+
+@keyframes secondary-glow {
+    0%, 100% {
+        background-color: var(--color-secondary);
+    }
+    50% {
+        background-color: var(--color-secondary-light);
+    }
+}
+
+.tertiary-link {
+    background: var(--color-tertiary);
+}
+
+.tertiary-link::before {
+    background: var(--color-tertiary);
+}
+
+.tertiary-link:hover::before {
+    background: var(--color-tertiary);
+}
+
+.tertiary-link:hover {
+    animation: tertiary-glow 1s ease-in-out infinite;
+}
+
+@keyframes tertiary-glow {
+    0%, 100% {
+        background-color: var(--color-tertiary);
+    }
+    50% {
+        background-color: var(--color-tertiary-light);
+    }
 }

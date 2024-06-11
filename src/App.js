@@ -8,29 +8,24 @@ function App() {
         <div className="App">
             <header className="glass-header">
                 <img src={logoheader} className="header-logo" alt="logo" />
-
             </header>
             <main className="App-main">
                 <div className="glass-effect" style={{ marginTop: 'calc(5vh + 50px)', marginBottom: '2.5vh', }}>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>This is the first section test and its longer</p>
-                    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                        Services
+                    <a className="App-link" href="https://laikafi.app" target="_blank" rel="noopener noreferrer">
+                        Laika
                     </a>
                 </div>
-
-                <div className="glass-effect" style={{ marginTop: '2.5vh', marginBottom: '2.5vh',}}> {/* Second section with different margins */}
+                <div className="glass-effect" style={{ marginTop: '2.5vh', marginBottom: '2.5vh',}}>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>Partners</p>
-                    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                        Partners 2
+                    <a className="App-link secondary-link" href="https://astrofi.app" target="_blank" rel="noopener noreferrer">
+                        Astro
                     </a>
                 </div>
-                <div className="glass-effect" style={{ marginTop: '2.5vh', marginBottom: '5vh' }}> {/* Third section with another unique margin */}
+                <div className="glass-effect" style={{ marginTop: '2.5vh', marginBottom: '5vh' }}>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>Abt</p>
-                    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                        Abt
+                    <a className="App-link tertiary-link" href="https://cosmofi.app" target="_blank" rel="noopener noreferrer">
+                        Cosmo
                     </a>
                 </div>
             </main>
